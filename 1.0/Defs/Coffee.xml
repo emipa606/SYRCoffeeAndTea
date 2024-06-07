@@ -1,22 +1,20 @@
-<?xml version="1.0" encoding="utf-8" ?>
-
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <ThingDef ParentName="PlantBase">
     <defName>Plant_SyrCoffee</defName>
     <label>coffee plant</label>
     <description>A green, leafy plant yielding coffee beans. These beans can be brewed into a tasty beverage.</description>
     <graphicData>
       <texPath>Things/Plant/SyrCoffeePlant</texPath>
-	    <graphicClass>Graphic_Single</graphicClass>
+      <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-	<statBases>
-		<MaxHitPoints>120</MaxHitPoints>
-		<Nutrition>0.2</Nutrition>
-	</statBases>
-	<selectable>true</selectable>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Nutrition>0.2</Nutrition>
+    </statBases>
+    <selectable>true</selectable>
     <neverMultiSelect>false</neverMultiSelect>
-	<pathCost>10</pathCost>
+    <pathCost>10</pathCost>
     <plant>
       <harvestedThingDef>SyrRawCoffee</harvestedThingDef>
       <harvestYield>10</harvestYield>
@@ -25,8 +23,8 @@
       <dieIfLeafless>true</dieIfLeafless>
       <harvestTag>Standard</harvestTag>
       <sowTags>
-      <li>Ground</li>
-      <li>Hydroponic</li>
+        <li>Ground</li>
+        <li>Hydroponic</li>
       </sowTags>
       <visualSizeRange>0.5~1.1</visualSizeRange>
       <topWindExposure>0.1</topWindExposure>
@@ -34,13 +32,12 @@
       <immatureGraphicPath>Things/Plant/SyrCoffeePlantImmature</immatureGraphicPath>
     </plant>
   </ThingDef>
-
   <ThingDef ParentName="RoughPlantBase">
     <defName>SyrRawCoffee</defName>
     <label>coffee beans</label>
     <description>Raw Coffee. Best prepared as a beverage.</description>
     <graphicData>
-		<texPath>Things/Item/Resource/PlantFoodRaw/RawCoffee</texPath>
+      <texPath>Things/Item/Resource/PlantFoodRaw/RawCoffee</texPath>
     </graphicData>
     <statBases>
       <MarketValue>2</MarketValue>
@@ -58,15 +55,14 @@
       <preferability>DesperateOnly</preferability>
     </ingestible>
   </ThingDef>
-  
   <ThingDef ParentName="DrugBase">
     <defName>SyrCoffee</defName>
     <label>coffee</label>
     <description>A delicious hot cup of coffee. The caffeine in it helps focus when working and allows people to stay up longer, however they need more energy and thus food.</description>
-	<graphicData>
-	<texPath>Things/Item/Drug/SyrCoffee</texPath>
-	<graphicClass>Graphic_StackCount</graphicClass>
-	</graphicData>
+    <graphicData>
+      <texPath>Things/Item/Drug/SyrCoffee</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
     <rotatable>false</rotatable>
     <statBases>
       <WorkToMake>300</WorkToMake>
@@ -75,7 +71,7 @@
     </statBases>
     <techLevel>Neolithic</techLevel>
     <ingestible>
-	    <preferability>NeverForNutrition</preferability>
+      <preferability>NeverForNutrition</preferability>
       <chairSearchRadius>16</chairSearchRadius>
       <foodType>Fluid, Processed</foodType>
       <joyKind>Luxury</joyKind>
@@ -110,8 +106,8 @@
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>SyrCaffeineTolerance</hediffDef>
           <severity>0.05</severity>
-		    <divideByBodySize>true</divideByBodySize>
-		</li>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
         <li Class="IngestionOutcomeDoer_OffsetNeed">
           <need>Rest</need>
           <offset>0.15</offset>
@@ -132,7 +128,6 @@
       </li>
     </comps>
   </ThingDef>
-  
   <HediffDef>
     <defName>SyrCoffeeHigh</defName>
     <hediffClass>HediffWithComps</hediffClass>
@@ -147,40 +142,38 @@
         <severityPerDay>-1.0</severityPerDay>
       </li>
     </comps>
-      <stages>
-        <li>
-          <label>energized</label>
-          <restFallFactor>0.8</restFallFactor>
-          <hungerRateFactor>1.2</hungerRateFactor>
-            <capMods>
-              <li>
-                <capacity>Consciousness</capacity>
-                <offset>0.1</offset>
-              </li>
-            </capMods>
-          <statOffsets>
-            <WorkSpeedGlobal>0.1</WorkSpeedGlobal>
-          </statOffsets>
-        </li>
-        <li>
-          <minSeverity>0.5</minSeverity>
-          <label>wired</label>
-          <restFallFactor>0.8</restFallFactor>
-          <hungerRateFactor>1.2</hungerRateFactor>
-            <capMods>
-              <li>
-                <capacity>Consciousness</capacity>
-                <offset>0.1</offset>
-              </li>
-            </capMods>
-          <statOffsets>
-            <WorkSpeedGlobal>0.2</WorkSpeedGlobal>
-          </statOffsets>
-        </li>
-      </stages>
+    <stages>
+      <li>
+        <label>energized</label>
+        <restFallFactor>0.8</restFallFactor>
+        <hungerRateFactor>1.2</hungerRateFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.1</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <WorkSpeedGlobal>0.1</WorkSpeedGlobal>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>0.5</minSeverity>
+        <label>wired</label>
+        <restFallFactor>0.8</restFallFactor>
+        <hungerRateFactor>1.2</hungerRateFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.1</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <WorkSpeedGlobal>0.2</WorkSpeedGlobal>
+        </statOffsets>
+      </li>
+    </stages>
   </HediffDef>
-
-
   <ThoughtDef>
     <defName>SyrCoffeeHigh</defName>
     <workerClass>ThoughtWorker_Hediff</workerClass>
@@ -193,5 +186,4 @@
       </li>
     </stages>
   </ThoughtDef>
-
 </Defs>

@@ -1,15 +1,13 @@
-<?xml version="1.0" encoding="utf-8" ?>
-
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <ThingDef ParentName="DrugBase">
     <defName>SyrHotChocolate</defName>
     <label>hot chocolate</label>
     <description>A delicious cup of hot chocolate. Raises the mood and provides warmth, the latter you might not want, depending on where you live.</description>
-	<graphicData>
-	<texPath>Things/Item/Drug/SyrHotChocolate</texPath>
-	<graphicClass>Graphic_StackCount</graphicClass>
-	</graphicData>
+    <graphicData>
+      <texPath>Things/Item/Drug/SyrHotChocolate</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
     <rotatable>false</rotatable>
     <statBases>
       <WorkToMake>300</WorkToMake>
@@ -18,7 +16,7 @@
     </statBases>
     <techLevel>Neolithic</techLevel>
     <ingestible>
-	  <preferability>NeverForNutrition</preferability>
+      <preferability>NeverForNutrition</preferability>
       <chairSearchRadius>16</chairSearchRadius>
       <foodType>Fluid, Processed</foodType>
       <joyKind>Luxury</joyKind>
@@ -62,7 +60,6 @@
       </li>
     </comps>
   </ThingDef>
-  
   <HediffDef>
     <defName>SyrHotChocolateHigh</defName>
     <hediffClass>HediffWithComps</hediffClass>
@@ -77,17 +74,16 @@
         <severityPerDay>-2.0</severityPerDay>
       </li>
     </comps>
-      <stages>
-        <li>
-          <label>warmth</label>
-          <statOffsets>
-            <ComfyTemperatureMin>-5</ComfyTemperatureMin>
-            <ComfyTemperatureMax>-5</ComfyTemperatureMax>
-          </statOffsets>
-        </li>
-      </stages>
+    <stages>
+      <li>
+        <label>warmth</label>
+        <statOffsets>
+          <ComfyTemperatureMin>-5</ComfyTemperatureMin>
+          <ComfyTemperatureMax>-5</ComfyTemperatureMax>
+        </statOffsets>
+      </li>
+    </stages>
   </HediffDef>
-  
   <ThoughtDef>
     <defName>SyrHotChocolateHigh</defName>
     <workerClass>ThoughtWorker_Hediff</workerClass>
@@ -100,5 +96,4 @@
       </li>
     </stages>
   </ThoughtDef>
-  
 </Defs>

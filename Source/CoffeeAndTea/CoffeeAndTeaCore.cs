@@ -1,87 +1,100 @@
-﻿using HarmonyLib;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Reflection;
+using HarmonyLib;
+using Mlie;
 using RimWorld;
-using Verse;
 using UnityEngine;
+using Verse;
 using Verse.Sound;
 
-namespace CoffeeAndTea
+namespace CoffeeAndTea;
+
+public class CoffeeAndTeaCore : Mod
 {
-    public class CoffeeAndTeaCore : Mod
+    public static bool policiesAdded;
+    private static string currentVersion;
+
+    public CoffeeAndTeaCore(ModContentPack content) : base(content)
     {
-        public CoffeeAndTeaCore(ModContentPack content) : base(content)
-        {
+        currentVersion = VersionFromManifest.GetVersionFromModMetaData(content.ModMetaData);
+    }
 
+    public override string SettingsCategory()
+    {
+        return "SyrCoffeeAndTeaCategory".Translate();
+    }
+
+    public override void DoSettingsWindowContents(Rect inRect)
+    {
+        var listing_Standard = new Listing_Standard();
+        listing_Standard.Begin(inRect);
+        if (policiesAdded)
+        {
+            GUI.color = Color.green;
+            listing_Standard.Label("SyrCoffeeAndTeaPoliciesAdded".Translate());
+            GUI.color = Color.white;
+            listing_Standard.Gap(24f);
         }
-        public override string SettingsCategory() => "SyrCoffeeAndTeaCategory".Translate();
-        public static bool policiesAdded = false;
 
-        public override void DoSettingsWindowContents(Rect inRect)
+        if (listing_Standard.ButtonText("SyrCoffeeAndTeaAddPolicies".Translate(),
+                "SyrCoffeeAndTeaAddPoliciesTooltip".Translate()))
         {
-            checked
+            SoundDefOf.Designate_PlanRemove.PlayOneShotOnCamera();
+            AddNewPolicies();
+        }
+
+        if (currentVersion != null)
+        {
+            listing_Standard.Gap();
+            GUI.contentColor = Color.gray;
+            listing_Standard.Label("SyrCoffeeAndTeaCurrentModVersion".Translate(currentVersion));
+            GUI.contentColor = Color.white;
+        }
+
+        listing_Standard.End();
+    }
+
+    public static void AddNewPolicies()
+    {
+        if (Current.ProgramState != ProgramState.Playing)
+        {
+            return;
+        }
+
+        foreach (var allPolicy in Current.Game.drugPolicyDatabase.AllPolicies)
+        {
+            var value = Traverse.Create(allPolicy).Field("entriesInt").GetValue<List<DrugPolicyEntry>>();
+            if (value.Find(i => i.drug == CoffeeAndTeaDefOf.SyrCoffee) == null)
             {
-                Listing_Standard listing_Standard = new Listing_Standard();
-                listing_Standard.Begin(inRect);
-                
-                if (policiesAdded)
+                value.Add(new DrugPolicyEntry
                 {
-                    GUI.color = Color.green;
-                    listing_Standard.Label("SyrCoffeeAndTeaPoliciesAdded".Translate());
-                    GUI.color = Color.white;
-                    listing_Standard.Gap(24f);
-                }
-                if (listing_Standard.ButtonText("SyrCoffeeAndTeaAddPolicies".Translate(), "SyrCoffeeAndTeaAddPoliciesTooltip".Translate()))
-                {
-                    SoundDefOf.Designate_PlanRemove.PlayOneShotOnCamera(null);
-                    AddNewPolicies();
-                }
-                listing_Standard.End();
+                    drug = CoffeeAndTeaDefOf.SyrCoffee,
+                    allowedForJoy = true,
+                    allowedForAddiction = true
+                });
             }
-        }
-        public override void WriteSettings()
-        {
-            base.WriteSettings();
-        }
 
-        public static void AddNewPolicies()
-        {
-            if (Current.ProgramState == ProgramState.Playing)
+            if (value.Find(i => i.drug == CoffeeAndTeaDefOf.SyrTea) == null)
             {
-                foreach (DrugPolicy drugPolicy in Current.Game.drugPolicyDatabase.AllPolicies)
+                value.Add(new DrugPolicyEntry
                 {
-                    List<DrugPolicyEntry> entriesInt = Traverse.Create(drugPolicy).Field("entriesInt").GetValue<List<DrugPolicyEntry>>();
-                    if (entriesInt.Find(i => i.drug == CoffeeAndTeaDefOf.SyrCoffee) == null)
-                    {
-                        DrugPolicyEntry drugPolicyEntry = new DrugPolicyEntry();
-                        drugPolicyEntry.drug = CoffeeAndTeaDefOf.SyrCoffee;
-                        drugPolicyEntry.allowedForJoy = true;
-                        drugPolicyEntry.allowedForAddiction = true;
-                        entriesInt.Add(drugPolicyEntry);
-                    }
-                    if (entriesInt.Find(i => i.drug == CoffeeAndTeaDefOf.SyrTea) == null)
-                    {
-                        DrugPolicyEntry drugPolicyEntry = new DrugPolicyEntry();
-                        drugPolicyEntry.drug = CoffeeAndTeaDefOf.SyrTea;
-                        drugPolicyEntry.allowedForJoy = true;
-                        drugPolicyEntry.allowedForAddiction = true;
-                        entriesInt.Add(drugPolicyEntry);
-                    }
-                    if (entriesInt.Find(i => i.drug == CoffeeAndTeaDefOf.SyrHotChocolate) == null)
-                    {
-                        DrugPolicyEntry drugPolicyEntry = new DrugPolicyEntry();
-                        drugPolicyEntry.drug = CoffeeAndTeaDefOf.SyrHotChocolate;
-                        drugPolicyEntry.allowedForJoy = true;
-                        entriesInt.Add(drugPolicyEntry);
-                    }
-                    entriesInt.SortBy((DrugPolicyEntry e) => e.drug.GetCompProperties<CompProperties_Drug>().listOrder);
-                    Traverse.Create(drugPolicy).Field("entriesInt").SetValue(entriesInt);
-                    policiesAdded = true;
-                }
+                    drug = CoffeeAndTeaDefOf.SyrTea,
+                    allowedForJoy = true,
+                    allowedForAddiction = true
+                });
             }
+
+            if (value.Find(i => i.drug == CoffeeAndTeaDefOf.SyrHotChocolate) == null)
+            {
+                value.Add(new DrugPolicyEntry
+                {
+                    drug = CoffeeAndTeaDefOf.SyrHotChocolate,
+                    allowedForJoy = true
+                });
+            }
+
+            value.SortBy(e => e.drug.GetCompProperties<CompProperties_Drug>().listOrder);
+            Traverse.Create(allPolicy).Field("entriesInt").SetValue(value);
+            policiesAdded = true;
         }
     }
 }

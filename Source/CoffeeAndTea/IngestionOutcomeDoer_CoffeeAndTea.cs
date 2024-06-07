@@ -1,55 +1,43 @@
-﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using RimWorld;
 using Verse;
 
+namespace CoffeeAndTea;
 
-namespace CoffeeAndTea
+public class IngestionOutcomeDoer_CoffeeAndTea : IngestionOutcomeDoer
 {
-    public class IngestionOutcomeDoer_CoffeeAndTea : IngestionOutcomeDoer
+    public readonly float severity = -1f;
+    public bool divideByBodySize;
+
+    public HediffDef hediffDefAdd;
+
+    public HediffDef hediffDefRemove;
+    public ChemicalDef toleranceChemical;
+
+    protected override void DoIngestionOutcomeSpecial(Pawn pawn, Thing ingested, int ingestedCount)
     {
-        public ChemicalDef toleranceChemical;
-        public float severity = -1f;
-        public HediffDef hediffDefAdd;
-        public HediffDef hediffDefRemove;
-        public bool divideByBodySize;
-
-        protected override void DoIngestionOutcomeSpecial(Pawn pawn, Thing ingested)
+        var hediff = HediffMaker.MakeHediff(hediffDefAdd, pawn);
+        var num = !(severity > 0f) ? hediffDefAdd.initialSeverity : severity;
+        if (divideByBodySize)
         {
-            Hediff hediffAdd = HediffMaker.MakeHediff(hediffDefAdd, pawn, null);
-            float num;
-            if (severity > 0f)
-            {
-                num = severity;
-            }
-            else
-            {
-                num = hediffDefAdd.initialSeverity;
-            }
-            if (divideByBodySize)
-            {
-                num /= pawn.BodySize;
-            }
-            AddictionUtility.ModifyChemicalEffectForToleranceAndBodySize(pawn, toleranceChemical, ref num);
-            hediffAdd.Severity = num;
-            pawn.health.AddHediff(hediffAdd, null, null, null);
-
-            Hediff hediffRemove = pawn.health.hediffSet.hediffs.Find((Hediff h) => h.def == hediffDefRemove);
-            if (hediffRemove != null)
-            {
-                pawn.health.RemoveHediff(hediffRemove);
-            }
+            num /= pawn.BodySize;
         }
 
-        public override IEnumerable<StatDrawEntry> SpecialDisplayStats(ThingDef parentDef)
+        AddictionUtility.ModifyChemicalEffectForToleranceAndBodySize_NewTemp(pawn, toleranceChemical, ref num, true);
+        hediff.Severity = num;
+        pawn.health.AddHediff(hediff);
+        var hediff2 = pawn.health.hediffSet.hediffs.Find(h => h.def == hediffDefRemove);
+        if (hediff2 != null)
         {
-            foreach (StatDrawEntry s in hediffDefAdd.SpecialDisplayStats(StatRequest.ForEmpty()))
-            {
-                yield return s;
-            }
-            yield break;
+            pawn.health.RemoveHediff(hediff2);
+        }
+    }
+
+    public override IEnumerable<StatDrawEntry> SpecialDisplayStats(ThingDef parentDef)
+    {
+        foreach (var item in hediffDefAdd.SpecialDisplayStats(StatRequest.ForEmpty()))
+        {
+            yield return item;
         }
     }
 }

@@ -1,9 +1,8 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2042
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeAndTea", "CoffeeAndTea\CoffeeAndTea.csproj", "{4A44CFAF-4EE5-48DE-9AC6-775ED98B373E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoffeeAndTea", "CoffeeAndTea\CoffeeAndTea.csproj", "{614E4944-434A-443E-8575-3BDF4F57ECD8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +10,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4A44CFAF-4EE5-48DE-9AC6-775ED98B373E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4A44CFAF-4EE5-48DE-9AC6-775ED98B373E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4A44CFAF-4EE5-48DE-9AC6-775ED98B373E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4A44CFAF-4EE5-48DE-9AC6-775ED98B373E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{614E4944-434A-443E-8575-3BDF4F57ECD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{614E4944-434A-443E-8575-3BDF4F57ECD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{614E4944-434A-443E-8575-3BDF4F57ECD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{614E4944-434A-443E-8575-3BDF4F57ECD8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {F3915153-8C7C-454F-B049-318A619E27D1}
+		SolutionGuid = {0d5518a9-3a47-41da-8f46-4c71ae43f48b}
 	EndGlobalSection
 EndGlobal

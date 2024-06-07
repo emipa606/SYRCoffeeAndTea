@@ -1,7 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
-
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <ThoughtDef>
     <defName>SyrCoffeeHigh</defName>
     <workerClass>CoffeeAndTea.ThoughtWorker_Coffee</workerClass>
@@ -19,7 +17,6 @@
       </li>
     </stages>
   </ThoughtDef>
-
   <ThoughtDef>
     <defName>SyrTeaHigh</defName>
     <workerClass>CoffeeAndTea.ThoughtWorker_Tea</workerClass>
@@ -37,8 +34,7 @@
       </li>
     </stages>
   </ThoughtDef>
-
-    <ThoughtDef>
+  <ThoughtDef>
     <defName>SyrCoffeeVsTea</defName>
     <thoughtClass>Thought_SituationalSocial</thoughtClass>
     <workerClass>CoffeeAndTea.ThoughtWorker_CoffeeVsTea</workerClass>
@@ -58,5 +54,4 @@
       </li>
     </stages>
   </ThoughtDef>
-  
 </Defs>
