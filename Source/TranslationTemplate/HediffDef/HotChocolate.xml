@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: hot chocolate -->
+  <SyrHotChocolateHigh.label>hot chocolate</SyrHotChocolateHigh.label>
+  <!-- EN: A positive effect on the mood caused by the ingestion of hot chocolate. Makes colder temperatures more tolerable, but warm temperatures less tolerable. -->
+  <SyrHotChocolateHigh.description>A positive effect on the mood caused by the ingestion of hot chocolate. Makes colder temperatures more tolerable, but warm temperatures less tolerable.</SyrHotChocolateHigh.description>
+  <!-- EN: effects of hot chocolate -->
+  <SyrHotChocolateHigh.labelNoun>effects of hot chocolate</SyrHotChocolateHigh.labelNoun>
+  <!-- EN: warmth -->
+  <SyrHotChocolateHigh.stages.warmth.label>warmth</SyrHotChocolateHigh.stages.warmth.label>
+</LanguageData>

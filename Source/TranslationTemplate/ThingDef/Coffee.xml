@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: coffee plant -->
+  <Plant_SyrCoffee.label>coffee plant</Plant_SyrCoffee.label>
+  <!-- EN: A green, leafy plant yielding coffee beans. These beans can be brewed into a tasty beverage. -->
+  <Plant_SyrCoffee.description>A green, leafy plant yielding coffee beans. These beans can be brewed into a tasty beverage.</Plant_SyrCoffee.description>
+  <!-- EN: coffee -->
+  <SyrCoffee.label>coffee</SyrCoffee.label>
+  <!-- EN: A delicious hot cup of coffee. The caffeine in it helps focus when working and allows people to stay up longer, however they need more energy and thus food. -->
+  <SyrCoffee.description>A delicious hot cup of coffee. The caffeine in it helps focus when working and allows people to stay up longer, however they need more energy and thus food.</SyrCoffee.description>
+  <!-- EN: Drink {0} -->
+  <SyrCoffee.ingestible.ingestCommandString>Drink {0}</SyrCoffee.ingestible.ingestCommandString>
+  <!-- EN: Drinking {0}. -->
+  <SyrCoffee.ingestible.ingestReportString>Drinking {0}.</SyrCoffee.ingestible.ingestReportString>
+  <!-- EN: coffee beans -->
+  <SyrRawCoffee.label>coffee beans</SyrRawCoffee.label>
+  <!-- EN: Raw Coffee. Best prepared as a beverage. -->
+  <SyrRawCoffee.description>Raw Coffee. Best prepared as a beverage.</SyrRawCoffee.description>
+</LanguageData>

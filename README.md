@@ -1,11 +1,13 @@
-# [[SYR] Coffee and Tea (Continued)]()
+# [[SYR] Coffee and Tea (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=3263163331)
 
 ![Image](https://i.imgur.com/buuPQel.png)
+
 Update of Syrchaliss mod https://steamcommunity.com/sharedfiles/filedetails/?id=1485312620
 
 ![Image](https://i.imgur.com/pufA0kM.png)
 	
 ![Image](https://i.imgur.com/Z4GOv8H.png)
+
 ## **Adds coffee and tea (and hot chocolate)**
 
 
@@ -36,6 +38,7 @@ This mod adds two new plants: Coffee and tea plants. Their harvest can be cooked
 Pawns are also tea or coffee drinkers with a minority having no preference. Liking the same beverage gives a relationship boost while liking different ones gives a penalty. Pawns will only get a mood boost from their prefered beverage, but always get the other effects. If both are available they will try to drink their prefered beverage.
 	
 ![Image](https://i.imgur.com/DGs4uph.png)
+
 Coffee
 
 
@@ -50,6 +53,7 @@ Coffee
  
 	
 ![Image](https://i.imgur.com/Jrc8MX8.png)
+
 Tea
 
 
@@ -62,6 +66,7 @@ Tea
 
 
 ![Image](https://i.imgur.com/gNuKNPY.png)
+
 Hot Chocolate
 
 
@@ -100,21 +105,21 @@ The effects coffee and tea grant are mutually exclusive. Drinking coffee will re
 
 ![Image](https://i.imgur.com/1YxHVGs.png)
 
-[quote]### **[https://steamcommunity.com/workshop/filedetails/?id=1474000866](Syrchalis' Mods)**
+[quote]### **[Syrchalis' Mods](https://steamcommunity.com/workshop/filedetails/?id=1474000866)**
 [/quote]Collection of my mods for RimWorld
-
-If you enjoy my mods consider dropping me a dime:
-[https://ko-fi.com/A0A0IJ2R]![Image](https://i.imgur.com/QMURwKz.png[/img][/url][url=https://www.patreon.com/syrchalis][img](https://i.imgur.com/NNM7mbP.png))
 
 ![Image](https://i.imgur.com/PwoNOj4.png)
 
 
+
 -  See if the the error persists if you just have this mod and its requirements active.
 -  If not, try adding your other mods until it happens again.
--  Post your error-log using [https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib[/url] or the standalone [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404](Uploader) and command Ctrl+F12
+-  Post your error-log using the [Log Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404) or the standalone [Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404) and command Ctrl+F12
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
--  Use [https://github.com/RimSort/RimSort/releases/latest](RimSort) to sort your mods
+-  Use [RimSort](https://github.com/RimSort/RimSort/releases/latest) to sort your mods
 
+ 
 
+[![Image](https://img.shields.io/github/v/release/emipa606/SYRCoffeeAndTea?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/3263163331) | tags:  beverages, caffeine,  mood

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: brew coffee -->
+  <Brew_SyrCoffee.label>brew coffee</Brew_SyrCoffee.label>
+  <!-- EN: Brew four cups of coffee -->
+  <Brew_SyrCoffee.description>Brew four cups of coffee</Brew_SyrCoffee.description>
+  <!-- EN: Brewing coffee. -->
+  <Brew_SyrCoffee.jobString>Brewing coffee.</Brew_SyrCoffee.jobString>
+  <!-- EN: brew hot chocolate -->
+  <Brew_SyrHotChocolate.label>brew hot chocolate</Brew_SyrHotChocolate.label>
+  <!-- EN: Brew four cups of hot chocolate -->
+  <Brew_SyrHotChocolate.description>Brew four cups of hot chocolate</Brew_SyrHotChocolate.description>
+  <!-- EN: Brewing hot chocolate. -->
+  <Brew_SyrHotChocolate.jobString>Brewing hot chocolate.</Brew_SyrHotChocolate.jobString>
+  <!-- EN: brew tea -->
+  <Brew_SyrTea.label>brew tea</Brew_SyrTea.label>
+  <!-- EN: Brew four cups of tea -->
+  <Brew_SyrTea.description>Brew four cups of tea</Brew_SyrTea.description>
+  <!-- EN: Brewing tea. -->
+  <Brew_SyrTea.jobString>Brewing tea.</Brew_SyrTea.jobString>
+</LanguageData>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: coffee -->
+  <SyrCoffeeHigh.label>coffee</SyrCoffeeHigh.label>
+  <!-- EN: A positive effect on mental abilities caused by the ingestion of coffee. -->
+  <SyrCoffeeHigh.description>A positive effect on mental abilities caused by the ingestion of coffee.</SyrCoffeeHigh.description>
+  <!-- EN: effects of coffee -->
+  <SyrCoffeeHigh.labelNoun>effects of coffee</SyrCoffeeHigh.labelNoun>
+  <!-- EN: energized -->
+  <SyrCoffeeHigh.stages.energized.label>energized</SyrCoffeeHigh.stages.energized.label>
+  <!-- EN: wired -->
+  <SyrCoffeeHigh.stages.wired.label>wired</SyrCoffeeHigh.stages.wired.label>
+</LanguageData>

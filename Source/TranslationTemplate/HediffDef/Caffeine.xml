@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: caffeine addiction -->
+  <SyrCaffeineAddiction.label>caffeine addiction</SyrCaffeineAddiction.label>
+  <!-- EN: A chemical addiction to caffeine. Long-term presence of caffeine has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug.\n\nWithout regular doses of caffeine, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction. -->
+  <SyrCaffeineAddiction.description>A chemical addiction to caffeine. Long-term presence of caffeine has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug.
+
+Without regular doses of caffeine, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.</SyrCaffeineAddiction.description>
+  <!-- EN: withdrawal -->
+  <SyrCaffeineAddiction.stages.withdrawal.label>withdrawal</SyrCaffeineAddiction.stages.withdrawal.label>
+  <!-- EN: caffeine tolerance -->
+  <SyrCaffeineTolerance.label>caffeine tolerance</SyrCaffeineTolerance.label>
+  <!-- EN: A built-up tolerance to caffeine. The more severe this tolerance is, the more caffeine it takes to get the same effect. -->
+  <SyrCaffeineTolerance.description>A built-up tolerance to caffeine. The more severe this tolerance is, the more caffeine it takes to get the same effect.</SyrCaffeineTolerance.description>
+  <!-- EN: small -->
+  <SyrCaffeineTolerance.stages.small.label>small</SyrCaffeineTolerance.stages.small.label>
+  <!-- EN: large -->
+  <SyrCaffeineTolerance.stages.large.label>large</SyrCaffeineTolerance.stages.large.label>
+  <!-- EN: massive -->
+  <SyrCaffeineTolerance.stages.massive.label>massive</SyrCaffeineTolerance.stages.massive.label>
+</LanguageData>

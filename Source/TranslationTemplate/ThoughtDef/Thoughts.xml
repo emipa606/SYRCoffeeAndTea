@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Coffee -->
+  <SyrCoffeeHigh.stages.Coffee-0.label>Coffee</SyrCoffeeHigh.stages.Coffee-0.label>
+  <!-- EN: I had an energizing cup of coffee. -->
+  <SyrCoffeeHigh.stages.Coffee-0.description>I had an energizing cup of coffee.</SyrCoffeeHigh.stages.Coffee-0.description>
+  <!-- EN: Coffee -->
+  <SyrCoffeeHigh.stages.Coffee-1.label>Coffee</SyrCoffeeHigh.stages.Coffee-1.label>
+  <!-- EN: I had an energizing cup of coffee, but I'm more of a tea drinker. -->
+  <SyrCoffeeHigh.stages.Coffee-1.description>I had an energizing cup of coffee, but I'm more of a tea drinker.</SyrCoffeeHigh.stages.Coffee-1.description>
+  <!-- EN: coffee drinker vs tea drinker -->
+  <SyrCoffeeVsTea.stages.coffee_drinker_vs_tea_drinker.label>coffee drinker vs tea drinker</SyrCoffeeVsTea.stages.coffee_drinker_vs_tea_drinker.label>
+  <!-- EN: fellow coffee drinker -->
+  <SyrCoffeeVsTea.stages.fellow_coffee_drinker.label>fellow coffee drinker</SyrCoffeeVsTea.stages.fellow_coffee_drinker.label>
+  <!-- EN: fellow tea drinker -->
+  <SyrCoffeeVsTea.stages.fellow_tea_drinker.label>fellow tea drinker</SyrCoffeeVsTea.stages.fellow_tea_drinker.label>
+  <!-- EN: Tea -->
+  <SyrTeaHigh.stages.Tea-0.label>Tea</SyrTeaHigh.stages.Tea-0.label>
+  <!-- EN: I had a soothing cup of tea. -->
+  <SyrTeaHigh.stages.Tea-0.description>I had a soothing cup of tea.</SyrTeaHigh.stages.Tea-0.description>
+  <!-- EN: Tea -->
+  <SyrTeaHigh.stages.Tea-1.label>Tea</SyrTeaHigh.stages.Tea-1.label>
+  <!-- EN: I had a soothing cup of tea, but I'm more of a coffee drinker. -->
+  <SyrTeaHigh.stages.Tea-1.description>I had a soothing cup of tea, but I'm more of a coffee drinker.</SyrTeaHigh.stages.Tea-1.description>
+</LanguageData>

@@ -10,7 +10,7 @@ namespace CoffeeAndTea;
 
 public class CoffeeAndTeaCore : Mod
 {
-    public static bool policiesAdded;
+    private static bool policiesAdded;
     private static string currentVersion;
 
     public CoffeeAndTeaCore(ModContentPack content) : base(content)
@@ -25,35 +25,35 @@ public class CoffeeAndTeaCore : Mod
 
     public override void DoSettingsWindowContents(Rect inRect)
     {
-        var listing_Standard = new Listing_Standard();
-        listing_Standard.Begin(inRect);
+        var listingStandard = new Listing_Standard();
+        listingStandard.Begin(inRect);
         if (policiesAdded)
         {
             GUI.color = Color.green;
-            listing_Standard.Label("SyrCoffeeAndTeaPoliciesAdded".Translate());
+            listingStandard.Label("SyrCoffeeAndTeaPoliciesAdded".Translate());
             GUI.color = Color.white;
-            listing_Standard.Gap(24f);
+            listingStandard.Gap(24f);
         }
 
-        if (listing_Standard.ButtonText("SyrCoffeeAndTeaAddPolicies".Translate(),
+        if (listingStandard.ButtonText("SyrCoffeeAndTeaAddPolicies".Translate(),
                 "SyrCoffeeAndTeaAddPoliciesTooltip".Translate()))
         {
             SoundDefOf.Designate_PlanRemove.PlayOneShotOnCamera();
-            AddNewPolicies();
+            addNewPolicies();
         }
 
         if (currentVersion != null)
         {
-            listing_Standard.Gap();
+            listingStandard.Gap();
             GUI.contentColor = Color.gray;
-            listing_Standard.Label("SyrCoffeeAndTeaCurrentModVersion".Translate(currentVersion));
+            listingStandard.Label("SyrCoffeeAndTeaCurrentModVersion".Translate(currentVersion));
             GUI.contentColor = Color.white;
         }
 
-        listing_Standard.End();
+        listingStandard.End();
     }
 
-    public static void AddNewPolicies()
+    private static void addNewPolicies()
     {
         if (Current.ProgramState != ProgramState.Playing)
         {

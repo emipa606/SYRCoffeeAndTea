@@ -7,17 +7,7 @@ public class ThoughtWorker_CoffeeVsTea : ThoughtWorker
 {
     protected override ThoughtState CurrentSocialStateInternal(Pawn p, Pawn other)
     {
-        if (!p.RaceProps.Humanlike)
-        {
-            return ThoughtState.Inactive;
-        }
-
-        if (!other.RaceProps.Humanlike)
-        {
-            return ThoughtState.Inactive;
-        }
-
-        if (!RelationsUtility.PawnsKnowEachOther(p, other))
+        if (!p.RaceProps.Humanlike || !other.RaceProps.Humanlike || !RelationsUtility.PawnsKnowEachOther(p, other))
         {
             return ThoughtState.Inactive;
         }

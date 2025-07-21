@@ -6,7 +6,7 @@ namespace CoffeeAndTea;
 
 public class IngestionOutcomeDoer_CoffeeAndTea : IngestionOutcomeDoer
 {
-    public readonly float severity = -1f;
+    private readonly float severity = -1f;
     public bool divideByBodySize;
 
     public HediffDef hediffDefAdd;
@@ -23,7 +23,7 @@ public class IngestionOutcomeDoer_CoffeeAndTea : IngestionOutcomeDoer
             num /= pawn.BodySize;
         }
 
-        AddictionUtility.ModifyChemicalEffectForToleranceAndBodySize_NewTemp(pawn, toleranceChemical, ref num, true);
+        AddictionUtility.ModifyChemicalEffectForToleranceAndBodySize(pawn, toleranceChemical, ref num, true);
         hediff.Severity = num;
         pawn.health.AddHediff(hediff);
         var hediff2 = pawn.health.hediffSet.hediffs.Find(h => h.def == hediffDefRemove);

@@ -11,29 +11,33 @@ public class JoyGiver_TakeDrug_BestIngestItem
     public static void Postfix(Pawn pawn, ref Thing __result)
     {
         var num = Rand.ValueSeeded(pawn.thingIDNumber ^ 0x7D);
-        if (num < 0.2f)
+        switch (num)
         {
-            return;
-        }
+            case < 0.2f:
+                return;
+            case < 0.6f when __result != null && __result.def == CoffeeAndTeaDefOf.SyrTea:
+            {
+                var thing = GenClosest.ClosestThing_Global_Reachable(pawn.Position, pawn.Map,
+                    pawn.Map.listerThings.ThingsOfDef(CoffeeAndTeaDefOf.SyrCoffee), PathEndMode.OnCell,
+                    TraverseParms.For(pawn), 9999f, predicate);
+                if (thing != null)
+                {
+                    __result = thing;
+                }
 
-        if (num < 0.6f && __result != null && __result.def == CoffeeAndTeaDefOf.SyrTea)
-        {
-            var thing = GenClosest.ClosestThing_Global_Reachable(pawn.Position, pawn.Map,
-                pawn.Map.listerThings.ThingsOfDef(CoffeeAndTeaDefOf.SyrCoffee), PathEndMode.OnCell,
-                TraverseParms.For(pawn), 9999f, predicate);
-            if (thing != null)
-            {
-                __result = thing;
+                break;
             }
-        }
-        else if (num >= 0.6f && __result != null && __result.def == CoffeeAndTeaDefOf.SyrCoffee)
-        {
-            var thing2 = GenClosest.ClosestThing_Global_Reachable(pawn.Position, pawn.Map,
-                pawn.Map.listerThings.ThingsOfDef(CoffeeAndTeaDefOf.SyrTea), PathEndMode.OnCell,
-                TraverseParms.For(pawn), 9999f, predicate);
-            if (thing2 != null)
+            case >= 0.6f when __result != null && __result.def == CoffeeAndTeaDefOf.SyrCoffee:
             {
-                __result = thing2;
+                var thing2 = GenClosest.ClosestThing_Global_Reachable(pawn.Position, pawn.Map,
+                    pawn.Map.listerThings.ThingsOfDef(CoffeeAndTeaDefOf.SyrTea), PathEndMode.OnCell,
+                    TraverseParms.For(pawn), 9999f, predicate);
+                if (thing2 != null)
+                {
+                    __result = thing2;
+                }
+
+                break;
             }
         }
 
@@ -41,11 +45,11 @@ public class JoyGiver_TakeDrug_BestIngestItem
 
         bool predicate(Thing t)
         {
-            return CanIngestForJoy(pawn, t);
+            return canIngestForJoy(pawn, t);
         }
     }
 
-    public static bool CanIngestForJoy(Pawn pawn, Thing t)
+    private static bool canIngestForJoy(Pawn pawn, Thing t)
     {
         if (!t.def.IsIngestible || t.def.ingestible.joyKind == null || t.def.ingestible.joy <= 0f || !pawn.WillEat(t))
         {

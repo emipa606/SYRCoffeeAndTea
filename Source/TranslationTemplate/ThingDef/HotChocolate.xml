@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: hot chocolate -->
+  <SyrHotChocolate.label>hot chocolate</SyrHotChocolate.label>
+  <!-- EN: A delicious cup of hot chocolate. Raises the mood and provides warmth, the latter you might not want, depending on where you live. -->
+  <SyrHotChocolate.description>A delicious cup of hot chocolate. Raises the mood and provides warmth, the latter you might not want, depending on where you live.</SyrHotChocolate.description>
+  <!-- EN: Drink {0} -->
+  <SyrHotChocolate.ingestible.ingestCommandString>Drink {0}</SyrHotChocolate.ingestible.ingestCommandString>
+  <!-- EN: Drinking {0}. -->
+  <SyrHotChocolate.ingestible.ingestReportString>Drinking {0}.</SyrHotChocolate.ingestible.ingestReportString>
+</LanguageData>

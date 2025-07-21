@@ -1,0 +1,34 @@
+ManifestFileVersion: 0
+CRC: 2482739021
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 464a135b70fef1e54861a3e938cd3fa4
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2612ac43db082a73502ee80f2eceb73f
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 464a135b70fef1e54861a3e938cd3fa4
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Data/Mlie.SYRCoffeeAndTea/Textures/Things/Plant/SyrCoffeePlant.png
+- Assets/Data/Mlie.SYRCoffeeAndTea/Textures/Things/Item/Drug/SyrCoffee/SyrCoffee_b.png
+- Assets/Data/Mlie.SYRCoffeeAndTea/Textures/Things/Item/Drug/SyrTea/SyrTea_b.png
+- Assets/Data/Mlie.SYRCoffeeAndTea/Textures/Things/Plant/SyrTeaPlantImmature.PNG
+- Assets/Data/Mlie.SYRCoffeeAndTea/Textures/Things/Item/Drug/SyrTea/SyrTea_a.png
+- Assets/Data/Mlie.SYRCoffeeAndTea/Textures/Things/Item/Drug/SyrHotChocolate/SyrHotChocolate_c.png
+- Assets/Data/Mlie.SYRCoffeeAndTea/Textures/Things/Item/Drug/SyrCoffee/SyrCoffee_a.png
+- Assets/Data/Mlie.SYRCoffeeAndTea/Textures/Things/Item/Drug/SyrCoffee/SyrCoffee_c.png
+- Assets/Data/Mlie.SYRCoffeeAndTea/Textures/Things/Item/Resource/PlantFoodRaw/RawCoffee.png
+- Assets/Data/Mlie.SYRCoffeeAndTea/Textures/Things/Item/Drug/SyrHotChocolate/SyrHotChocolate_a.png
+- Assets/Data/Mlie.SYRCoffeeAndTea/Textures/Things/Plant/SyrTeaPlant.PNG
+- Assets/Data/Mlie.SYRCoffeeAndTea/Textures/Things/Item/Resource/PlantFoodRaw/RawTea.png
+- Assets/Data/Mlie.SYRCoffeeAndTea/Textures/Things/Item/Drug/SyrHotChocolate/SyrHotChocolate_b.png
+- Assets/Data/Mlie.SYRCoffeeAndTea/Textures/Things/Plant/SyrCoffeePlantImmature.png
+- Assets/Data/Mlie.SYRCoffeeAndTea/Textures/Things/Item/Drug/SyrTea/SyrTea_c.png
+Dependencies: []

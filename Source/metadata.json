@@ -3,5 +3,17 @@
   "CanAdd": "0",
   "CanRemove": "2",
   "SocialImageSet": true,
-  "PreviewVersion": "1.5"
+  "PreviewVersion": "1.6",
+  "SearchTags": [
+    " beverages",
+    "caffeine",
+    " mood"
+  ],
+  "Patches": true,
+  "Defs": true,
+  "Assemblies": true,
+  "LinesOfCode": 12897,
+  "LinesOfXML": 28038,
+  "CodeBaseSize": 73,
+  "LastXmlCleaning": "2025-07-21T20:57:02.8661743+02:00"
 }

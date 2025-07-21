@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: tea -->
+  <SyrTeaHigh.label>tea</SyrTeaHigh.label>
+  <!-- EN: A positive effect on learning and a reduction of hunger rate caused by the ingestion of tea. -->
+  <SyrTeaHigh.description>A positive effect on learning and a reduction of hunger rate caused by the ingestion of tea.</SyrTeaHigh.description>
+  <!-- EN: effects of tea -->
+  <SyrTeaHigh.labelNoun>effects of tea</SyrTeaHigh.labelNoun>
+  <!-- EN: calm -->
+  <SyrTeaHigh.stages.calm.label>calm</SyrTeaHigh.stages.calm.label>
+</LanguageData>
